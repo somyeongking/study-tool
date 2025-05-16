@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 스터디 플래너</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 메인 컨테이너: 스톱워치, 스터디 플래너, 타이머 영역을 담을 공간 -->
+    <div class="main-container">
+
+        <!-- 스톱워치 영역 (새로 분리) -->
+        <div class="stopwatch-container tool-item">
+            <h3>스톱워치</h3>
+            <div class="display" id="stopwatch-display">00:00:00</div>
+            <button id="start-stop-stopwatch">시작</button>
+            <button id="reset-stopwatch">초기화</button>
+        </div>
+        <!-- 스톱워치 영역 끝 -->
+
+        <!-- 기존 스터디 플래너 컨테이너 -->
+        <div class="study-planner-container tool-item">
+            <!-- 새로운 과목/프로젝트를 추가하는 입력 영역 -->
+            <div class="add-item-area">
+                <input type="text" id="item-name-input" placeholder="과목 또는 프로젝트 이름을 입력하세요">
+                <select id="item-category-select">
+                    <option value="day">하루 목표</option>
+                    <option value="week">일주일 목표</option>
+                    <option value="month">한 달 목표</option>
+                    <option value="year">1년 목표</option>
+                </select>
+                <button id="add-item-button">추가</button>
+            </div>
+
+            <!-- 과목/프로젝트 목록을 보여주는 영역 -->
+            <div class="items-list-area">
+                <div class="category-list" id="day-list">
+                    <h3>하루 목표</h3>
+                    <ul></ul>
+                </div>
+                <div class="category-list" id="week-list">
+                    <h3>일주일 목표</h3>
+                    <ul></ul>
+                </div>
+                <div class="category-list" id="month-list">
+                    <h3>한 달 목표</h3>
+                <ul></ul>
+                </div>
+                 <div class="category-list" id="year-list">
+                    <h3>1년 목표</h3>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <!-- 스터디 플래너 컨테이너 끝 -->
+
+        <!-- 타이머 영역 (새로 분리) -->
+        <div class="timer-container tool-item">
+            <h3>타이머</h3>
+            <div class="display" id="timer-display">00:00:00</div>
+            <button id="start-pause-timer">시작</button>
+            <button id="reset-timer">초기화</button>
+        </div>
+        <!-- 타이머 영역 끝 -->
+
+    </div>
+    <!-- 메인 컨테이너 끝 -->
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+
+</body>
+</html>
